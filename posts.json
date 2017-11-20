@@ -9,34 +9,6 @@
 				"Offal"
 			],
 			"title": "Garlic mushrooms a la crème with lardons and green pepper"
-		},
-		{
-			"id": "creme-with-lardons-and-green-pepper",
-			"content": "Not the most photogenic dish, but really easy, quick and delicious!",
-			"date": "2017-11-20",
-			"tag": [
-				"Offal"
-			],
-			"title": "Crème with lardons and green pepper"
-		},
-		{
-			"id": "lardons-and-green-pepper",
-			"content": "Not the most photogenic dish, but really easy, quick and delicious!",
-			"date": "2017-11-20",
-			"tag": [
-				"Offal"
-			],
-			"title": "Lardons and green pepper"
-		},
-		{
-			"id": "green-pepper",
-			"content": "Not the most photogenic dish, but really easy, quick and delicious!",
-			"date": "2017-11-20",
-			"tag": [
-				"Chicken",
-				"Offal"
-			],
-			"title": "Green pepper"
 		}
 	]
 }
