@@ -1,26 +1,13 @@
 {
 	"post": [
 		{
-			"title": "How to create a Vue.js component",
-			"tag": []
-		},
-		{
+			"id": "how-to-create-a-vuejs-component",
 			"date": "2017-11-20",
 			"tag": [
-				"Open Source",
 				"Vue.js"
 			],
 			"title": "How to create a Vue.js component",
-			"content": "Soon!"
-		},
-		{
-			"date": "2017-11-20",
-			"tag": [
-				"Open Source",
-				"Vue.js"
-			],
-			"title": "How to create a Vue.js component",
-			"content": "Soon!"
+			"content": "Soon!!"
 		}
 	]
 }
