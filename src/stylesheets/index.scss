@@ -7,4 +7,11 @@
 @import
 'layout/common',
 'layout/footer',
-'layout/header';
+'layout/header',
+'layout/about',
+'layout/posts',
+'layout/post';
+
+@import
+'components/social',
+'components/disqus';

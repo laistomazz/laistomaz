@@ -1,21 +1,24 @@
 a {
-	text-decoration: none;
-	color: red;
-	transition: color 300ms;
-
-	&:hover {
-		opacity: 0.8;
-	}
+	color: inherit;
 }
 
 .container {
+	position: relative;
+	display: table;
 	width: 100%;
-	max-width: 600px;
+	max-width: $container;
 	margin: 0 auto;
 }
 
-p,
+p {
+	font-size: $textSize;
+	margin-bottom: $gutter / 2;
+
+	strong {
+		font-weight: 700;
+	}
+}
+
 ul {
-	font-size: 1.6em;
-	text-align: justify;
+	font-size: $textSize;
 }

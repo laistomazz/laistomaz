@@ -1,0 +1,26 @@
+.social {
+	ul {
+		list-style: none;
+
+		li {
+			display: inline-block;
+
+			i {
+				font-size: 2em;
+			}
+
+			span {
+				font-size: 0;
+			}
+
+			a {
+				color: $white;
+				transition: color 300ms;
+
+				&:hover {
+					color: $green;
+				}
+			}
+		}
+	}
+}
