@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="x-ua-compatible" content="IE=Edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Laís Tomaz - Front-end developer</title>
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css">
+
+	<link rel="stylesheet" href="./dist/css/index.css">
+	<style>
+		h1{
+			font-size: 3em;
+			font-weight: 700;
+		}
+		h2{
+			font-size: 2.6em;
+		}
+		h3{
+			font-size: 2.2em;
+			margin: 1em 0 0 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Laís Tomaz</h1>
+			<h2>Front-end developer</h2>
+		</header>
+
+		<main>>
+			<section mv-app mv-storage="https://github.com/laistomazz/laistomaz/blob/mavo/posts.json"
+	         mv-bar="no-login" mv-plugins="markdown" id="[idify(name)]">
+
+				<div class="mv-bar mv-ui mv-fixed"></div>
+				<meta property="selectedpost" mv-value="url('post')" />
+
+				<article property="post" mv-multiple style="--image: url([image])" mv-multiple-path="id=[if(selectedpost)]">
+					<header class="post-card">
+						<a href="[image]" target="_blank"><img property="image"></a>
+						<h2 property="name"></h2>
+						<p class="hide-on-read">
+							http://forkgasm.com/post/<span property="id" mv-default="[idify(name)]"></span>
+						</p>
+						<p property="description"></p>
+						<p class="tags">
+							<span property="tag" mv-multiple></span>
+						</p>
+					</header>
+
+					<div class="content">
+						<section class="ingredients">
+							<h3>Ingredients</h3>
+							<ol>
+								<li property="ingredient" mv-multiple>
+									<input type="checkbox">
+									<span property="amount">1</span>
+									<span property="unit" mv-edit-list="units"></span>
+									<span property="name"></span>
+									<span property="preparation" mv-edit-list="#preparations"></span>
+								</li>
+							</ol>
+						</section>
+
+						<section class="directions">
+							<h3>Directions</h3>
+							<ol>
+								<li property="step" mv-multiple>
+									<div property="description" class="markdown"></div>
+									<img property="image">
+								</li>
+							</ol>
+						</section>
+					</div>
+
+					<h3 class="[if(!notes, 'hide-on-read')]">Notes</h3>
+					<div property="notes" class="markdown"></div>
+
+					<footer class="[if(!forked, 'hide-on-read')]">
+						<span>Forked from</span>
+						<div property="forked" class="markdown"></div>
+					</footer>
+				</article>
+
+				<a href="?login" class="mv-login mv-logged-out">Login to edit</a>
+
+				<div>
+					<datalist id="units">
+						<option>g</option>
+						<optgroup label="Small amounts">
+							<option>tsp</option>
+							<option>tbsp</option>
+							<option>oz</option>
+							<option>pinch</option>
+						</optgroup>
+						<optgroup label="Large amounts">
+							<option>cup</option>
+							<option>pound</option>
+							<option>kg</option>
+						</optgroup>
+						<optgroup label="Volume">
+							<option>ml</option>
+							<option>floz</option>
+						</optgroup>
+					</datalist>
+
+					<datalist id="preparations">
+						<option>diced</option>
+						<option>minced</option>
+						<option>sliced</option>
+					</datalist>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<h3>If you need more information about me</h3>
+			<p>Please get in touch, so I can send you my latest works</p>
+			<p><a href="mailto:laisotomaz@gmail.com">laisotomaz@gmail.com</a></p>
+			<p>+55 (11) 99867-4163</p>
+			<h3>DON'T WANT TO SEND AN E-MAIL?</h3>
+			<p>Ok, ok ...</p>
+			<p>You can find out what I'm currently studing at my <a href="https://github.com/laistomazz" target="_blank">Github</a></p>
+			<p>I'm on <a href="https://br.linkedin.com/in/laistomaz" target="_blank">Linkedin</a> as well.</p>
+			<h3>See ya...</h3>
+		</footer>
+	</div>
+	<script src="https://dev.mavo.io/dist/mavo.js"></script>
+</body>
+</html>
