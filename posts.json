@@ -9,6 +9,15 @@
 				"Offal"
 			],
 			"title": "Garlic mushrooms a la crème with lardons and green pepper"
+		},
+		{
+			"date": "2017-11-20",
+			"tag": [
+				"Open Source",
+				"Vue.js"
+			],
+			"title": "How to create a Vue.js component",
+			"content": "Soon!"
 		}
 	]
 }
