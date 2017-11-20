@@ -1,0 +1,31 @@
+@media(max-width: 769px) {
+	header {
+		padding-bottom: 0;
+
+		img {
+			display: none;
+		}
+
+		.social {
+			position: relative;
+			bottom: auto;
+			right: auto;
+			float: right;
+		}
+
+		h1,
+		h2 {
+			float: left;
+			clear: both;
+		}
+	}
+	.container {
+		padding-left: $gutter / 2;
+		padding-right: $gutter / 2;
+	}
+	.post {
+		h2 {
+			font-size: 2em;
+		}
+	}
+}
