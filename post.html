@@ -5,128 +5,88 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 	<title>Laís Tomaz - Front-end developer</title>
-	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700|Rubik:900" rel="stylesheet">
 	<link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css">
-
 	<link rel="stylesheet" href="./dist/css/index.css">
-	<style>
-		h1{
-			font-size: 3em;
-			font-weight: 700;
-		}
-		h2{
-			font-size: 2.6em;
-		}
-		h3{
-			font-size: 2.2em;
-			margin: 1em 0 0 0;
-		}
-	</style>
 </head>
 <body>
-	<div class="container">
-		<header>
-			<h1>Laís Tomaz</h1>
-			<h2>Front-end developer</h2>
-		</header>
+	<header>
+		<div class="container">
+			<a href="./"><img src="./dist/img/lais_tomaz_2017.jpg" alt="Lais Tomaz Profile Picture"></a>
 
-		<main>>
-			<section mv-app mv-storage="https://github.com/laistomazz/laistomaz/blob/mavo/posts.json"
-	         mv-bar="no-login" mv-plugins="markdown" id="[idify(name)]">
+			<div class="title">
+				<h1>Laís Tomaz</h1>
+				<h2>Front-end developer</h2>
+			</div>
 
-				<div class="mv-bar mv-ui mv-fixed"></div>
-				<meta property="selectedpost" mv-value="url('post')" />
+			<nav class="social">
+				<ul>
+					<li class="github"><a href="http://github.com/laistomazz" target="_blank"><i class="demo-icon icon-github-circled"></i> <span>GitHub</span></a></li>
+					<li class="linkedin"><a href="https://www.linkedin.com/in/laistomaz/" target="_blank"><i class="demo-icon icon-linkedin"></i> <span>LinkedIn</span></a></li>
+					<li class="twitter"><a href="http://twitter.com/laistomazz" target="_blank"><i class="demo-icon icon-twitter"></i> <span>Twitter</span></a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-				<article property="post" mv-multiple style="--image: url([image])" mv-multiple-path="id=[if(selectedpost)]">
-					<header class="post-card">
-						<a href="[image]" target="_blank"><img property="image"></a>
-						<h2 property="name"></h2>
-						<p class="hide-on-read">
-							http://forkgasm.com/post/<span property="id" mv-default="[idify(name)]"></span>
-						</p>
-						<p property="description"></p>
-						<p class="tags">
-							<span property="tag" mv-multiple></span>
-						</p>
-					</header>
+	<main class="post container" mv-app mv-storage="https://github.com/laistomazz/laistomaz/blob/mavo/posts.json" mv-bar="no-login" mv-plugins="markdown" id="[idify(title)]">
 
-					<div class="content">
-						<section class="ingredients">
-							<h3>Ingredients</h3>
-							<ol>
-								<li property="ingredient" mv-multiple>
-									<input type="checkbox">
-									<span property="amount">1</span>
-									<span property="unit" mv-edit-list="units"></span>
-									<span property="name"></span>
-									<span property="preparation" mv-edit-list="#preparations"></span>
-								</li>
-							</ol>
-						</section>
+		<div class="mv-bar mv-ui mv-fixed"></div>
+		<meta property="selectedpost" mv-value="url('post')" />
 
-						<section class="directions">
-							<h3>Directions</h3>
-							<ol>
-								<li property="step" mv-multiple>
-									<div property="description" class="markdown"></div>
-									<img property="image">
-								</li>
-							</ol>
-						</section>
-					</div>
+		<article property="post" mv-multiple mv-multiple-path="id=[if(selectedpost)]">
+			<time property="date" class="date"></time>
+			<p class="tags">
+				<span property="tag" mv-multiple></span>
+			</p>
 
-					<h3 class="[if(!notes, 'hide-on-read')]">Notes</h3>
-					<div property="notes" class="markdown"></div>
+			<hr>
 
-					<footer class="[if(!forked, 'hide-on-read')]">
-						<span>Forked from</span>
-						<div property="forked" class="markdown"></div>
-					</footer>
-				</article>
+			<h3>Today I've learned</h3>
+			<h2 property="title"></h2>
 
-				<a href="?login" class="mv-login mv-logged-out">Login to edit</a>
+			<div class="content" property="content">
+			</div>
+		</article>
 
-				<div>
-					<datalist id="units">
-						<option>g</option>
-						<optgroup label="Small amounts">
-							<option>tsp</option>
-							<option>tbsp</option>
-							<option>oz</option>
-							<option>pinch</option>
-						</optgroup>
-						<optgroup label="Large amounts">
-							<option>cup</option>
-							<option>pound</option>
-							<option>kg</option>
-						</optgroup>
-						<optgroup label="Volume">
-							<option>ml</option>
-							<option>floz</option>
-						</optgroup>
-					</datalist>
+		<a href="./" class="back">Return</a>
 
-					<datalist id="preparations">
-						<option>diced</option>
-						<option>minced</option>
-						<option>sliced</option>
-					</datalist>
-				</div>
-			</section>
-		</main>
+		<div id="disqus_thread"></div>
+		<script>
+			var disqus_config = function () {
+				this.page.url = url();  // Replace PAGE_URL with your page's canonical URL variable
+				this.page.identifier = url('post') // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			};
+			(function() { // DON'T EDIT BELOW THIS LINE
+			var d = document, s = d.createElement('script');
+			s.src = 'https://lais-tomaz.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-		<footer>
-			<h3>If you need more information about me</h3>
-			<p>Please get in touch, so I can send you my latest works</p>
-			<p><a href="mailto:laisotomaz@gmail.com">laisotomaz@gmail.com</a></p>
-			<p>+55 (11) 99867-4163</p>
-			<h3>DON'T WANT TO SEND AN E-MAIL?</h3>
-			<p>Ok, ok ...</p>
-			<p>You can find out what I'm currently studing at my <a href="https://github.com/laistomazz" target="_blank">Github</a></p>
-			<p>I'm on <a href="https://br.linkedin.com/in/laistomaz" target="_blank">Linkedin</a> as well.</p>
-			<h3>See ya...</h3>
-		</footer>
-	</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<h2>Get in touch</h2>
+			<p>If you have any more questions about me or my work, please contact me:</p>
+			<p>
+				<a href="mailto:laisotomaz@gmail.com">laisotomaz@gmail.com</a><br>
+				+55 (11) 99867-4163
+			</p>
+
+			<nav class="social">
+				<ul>
+					<li class="github"><a href="http://github.com/laistomazz" target="_blank"><i class="demo-icon icon-github-circled"></i> <span>GitHub</span></a></li>
+					<li class="linkedin"><a href="https://www.linkedin.com/in/laistomaz/" target="_blank"><i class="demo-icon icon-linkedin"></i> <span>LinkedIn</span></a></li>
+					<li class="twitter"><a href="http://twitter.com/laistomazz" target="_blank"><i class="demo-icon icon-twitter"></i> <span>Twitter</span></a></li>
+				</ul>
+			</nav>
+		</div>
+	</footer>
+
 	<script src="https://dev.mavo.io/dist/mavo.js"></script>
 </body>
 </html>
