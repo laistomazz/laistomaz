@@ -1,14 +1,13 @@
 {
 	"post": [
 		{
-			"id": "garlic-mushrooms-a-la-creme-with-lardons-and-green-pepper",
-			"content": "Not the most photogenic dish, but really easy, quick and delicious!",
 			"date": "2017-11-20",
 			"tag": [
-				"Chicken",
-				"Offal"
+				"Open Source",
+				"Vue.js"
 			],
-			"title": "Garlic mushrooms a la crème with lardons and green pepper"
+			"title": "How to create a Vue.js component",
+			"content": "Soon!"
 		},
 		{
 			"date": "2017-11-20",
