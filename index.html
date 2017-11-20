@@ -5,111 +5,75 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 	<title>Laís Tomaz - Front-end developer</title>
-	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700|Rubik:900" rel="stylesheet">
 	<link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css">
-
 	<link rel="stylesheet" href="./dist/css/index.css">
-	<style>
-		h1{
-			font-size: 3em;
-			font-weight: 700;
-		}
-		h2{
-			font-size: 2.6em;
-		}
-		h3{
-			font-size: 2.2em;
-			margin: 1em 0 0 0;
-		}
-	</style>
 </head>
 <body>
-	<div class="container">
-		<header>
-			<h1>Laís Tomaz</h1>
-			<h2>Front-end developer</h2>
-		</header>
+	<header>
+		<div class="container">
+			<img src="./dist/img/lais_tomaz_2017.jpg" alt="Lais Tomaz Profile Picture">
 
-		<section mv-app="posts" mv-storage="https://github.com/laistomazz/laistomaz/blob/mavo/posts.json" mv-plugins="markdown" class="index">
-			<article property="post" mv-multiple class="post-card" mv-order="desc">
-				<a href="/post/[id]">
-					<h2 property="name"></h2>
+			<div class="title">
+				<h1>Laís Tomaz</h1>
+				<h2>Front-end developer</h2>
+			</div>
+
+			<nav class="social">
+				<ul>
+					<li class="github"><a href="http://github.com/laistomazz" target="_blank"><i class="demo-icon icon-github-circled"></i> <span>GitHub</span></a></li>
+					<li class="linkedin"><a href="https://www.linkedin.com/in/laistomaz/" target="_blank"><i class="demo-icon icon-linkedin"></i> <span>LinkedIn</span></a></li>
+					<li class="twitter"><a href="http://twitter.com/laistomazz" target="_blank"><i class="demo-icon icon-twitter"></i> <span>Twitter</span></a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section class="about">
+		<article class="container">
+			<p><strong>Hi, first of all, thanks for your visit!</strong></p>
+			<p>I've been working as a front-end developer for about 5 years now and currently I am developing using Vue.js and React, among other things.</p>
+			<p>To know more about me, including the detailed list of what I already know and what I'm studying right now, please <a href="about.html">click here</a>.</p>
+		</article>
+	</section>
+
+	<section class="posts container" mv-app="posts" mv-storage="https://github.com/laistomazz/laistomaz/blob/mavo/posts.json" mv-plugins="markdown" mv-bar="no-login">
+		<h2>POSTS</h2>
+
+		<p>I believe that sharing what we've learned is one of the best ways to become a better developer, so here I will try to post some thoughts about what I know.</p>
+
+		<ul>
+			<li property="post" mv-multiple mv-order="desc">
+				<a href="/post.html?post=[id]">
+					<h3 property="title"></h3>
 				</a>
-				<p class="hide-on-read">
-					http://forkgasm.com/post/<span property="id" mv-default="[idify(name)]"></span>
-				</p>
-				<p property="description"></p>
+
 				<p class="tags">
 					<span property="tag" mv-multiple></span>
 				</p>
-			</article>
+			</li>
+		</ul>
+	</section>
 
-			<a href="?login" class="mv-login mv-logged-out">Login to edit</a>
-		</section>
-		<main>
-			<p>Hi, first of all, thanks for your visit!</p>
-			<p>I've been working as a front-end developer for about 5 years now and currently I am working A LOT and spending my time learning AAAAALL the new JS frameworks people love to create every couple of days. That's why right now my "portfolio" is looking like this.</p>
-			<p>The good part of this "layout" is that it is responsive, fancy minimalist, super light and delivers the message anyways ;)</p>
-			<p>BUT since you're already here, let's talk a litte about me ...</p>
-			<h3>I know</h3>
-			<ul>
-				<li>HTML5</li>
-				<li>CSS3 (including simple animations)</li>
-				<li>Javascript / ES6 &#9829;</li>
-				<li>Responsive development (not dependent of libraries)</li>
-			</ul>
-			<h3>I have experience using</h3>
-			<ul>
-				<li>SASS/LESS</li>
-				<li>Grunt/Gulp/Bower/NPM Scripts</li>
-				<li>Git/Svn</li>
-				<li>jQuery</li>
-				<li>Bootstrap</li>
-				<li>SVG</li>
-				<li>Animations libraries like GreenSock</li>
-				<li>CoffeScript</li>
-				<li>Middleman/Hugo</li>
-				<li>Ionic</li>
-			</ul>
-			<h3>I already developed</h3>
-			<ul>
-				<li>using Vue.js <small>&#9829;</small></li>
-				<li>lots and lots of Wordpress themes (from scratch)</li>
-				<li>lots of Joomla themes</li>
-				<li>quite a bit for Magento and Vtex e-commerce</li>
-			</ul>
-			<h3>Right now I'm studing and developing with</h3>
-			<ul>
-				<!--<li><s>Angular 2</s> <small>nevermind</small></li>
-				<li><s>Typescript</s> <small>nope</small></li>-->
-				<li>React</li>
-				<li>Node.js</li>
-				<li>Test driven development</li>
-			</ul>
-			<p>Did you understand why I don't have time to think about a super incredible and cute portfolio? HELP ME GOD</p>
-			<h3>Here are some extras 'cuz I'm feeling nice</h3>
-			<ul>
-				<li>I can speak english very well</li>
-				<li>But my native language is portuguese</li>
-				<li>I was born and raised on Brazil</li>
-				<li>But I'm also a Portuguese citizen (ora pois)</li>
-				<li>I'm a self-taught developer, but I took some short courses here and there</li>
-				<li>I sing in an "alternative metal" band called <a href="http://valiriaband.com" target="_blank">Valiria</a></li>
-			</ul>
-		</main>
+	<footer>
+		<div class="container">
+			<h2>Get in touch</h2>
+			<p>If you have any more questions about me or my work, please contact me:</p>
+			<p>
+				<a href="mailto:laisotomaz@gmail.com">laisotomaz@gmail.com</a><br>
+				+55 (11) 99867-4163
+			</p>
 
-		<footer>
-			<h3>If you need more information about me</h3>
-			<p>Please get in touch, so I can send you my latest works</p>
-			<p><a href="mailto:laisotomaz@gmail.com">laisotomaz@gmail.com</a></p>
-			<p>+55 (11) 99867-4163</p>
-			<h3>DON'T WANT TO SEND AN E-MAIL?</h3>
-			<p>Ok, ok ...</p>
-			<p>You can find out what I'm currently studing at my <a href="https://github.com/laistomazz" target="_blank">Github</a></p>
-			<p>I'm on <a href="https://br.linkedin.com/in/laistomaz" target="_blank">Linkedin</a> as well.</p>
-			<h3>See ya...</h3>
-		</footer>
-	</div>
+			<nav class="social">
+				<ul>
+					<li class="github"><a href="http://github.com/laistomazz" target="_blank"><i class="demo-icon icon-github-circled"></i> <span>GitHub</span></a></li>
+					<li class="linkedin"><a href="https://www.linkedin.com/in/laistomaz/" target="_blank"><i class="demo-icon icon-linkedin"></i> <span>LinkedIn</span></a></li>
+					<li class="twitter"><a href="http://twitter.com/laistomazz" target="_blank"><i class="demo-icon icon-twitter"></i> <span>Twitter</span></a></li>
+				</ul>
+			</nav>
+		</div>
+	</footer>
+
 	<script src="https://dev.mavo.io/dist/mavo.js"></script>
 </body>
 </html>
