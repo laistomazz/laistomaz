@@ -22,3 +22,7 @@ p {
 ul {
 	font-size: $textSize;
 }
+
+[mv-app]:not([mv-mode=edit]) .hide-on-read {
+	display: none;
+}
