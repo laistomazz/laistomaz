@@ -1,0 +1,21 @@
+a {
+	text-decoration: none;
+	color: red;
+	transition: color 300ms;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+p,
+ul {
+	font-size: 1.6em;
+	text-align: justify;
+}
