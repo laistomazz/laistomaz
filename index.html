@@ -6,7 +6,8 @@
 	<meta charset="UTF-8">
 	<title>Laís Tomaz - Front-end developer</title>
 	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans" rel="stylesheet">
-	<link rel="stylesheet" href="./src/vendors/mavo.css">
+	<link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css">
+
 	<link rel="stylesheet" href="./dist/css/index.css">
 	<style>
 		h1{
@@ -29,14 +30,13 @@
 			<h2>Front-end developer</h2>
 		</header>
 
-		<section mv-app="recipes" mv-storage="https://github.com/laistomazz/laistomaz/blob/mavo/posts.json" mv-plugins="markdown" class="index">
-			<article property="recipe" mv-multiple style="--image: url([image])" class="recipe-card" mv-order="desc">
-				<a href="/recipe/[id]">
-					<img property="image">
+		<section mv-app="posts" mv-storage="https://github.com/laistomazz/laistomaz/blob/mavo/posts.json" mv-plugins="markdown" class="index">
+			<article property="post" mv-multiple class="post-card" mv-order="desc">
+				<a href="/post/[id]">
 					<h2 property="name"></h2>
 				</a>
 				<p class="hide-on-read">
-					http://forkgasm.com/recipe/<span property="id" mv-default="[idify(name)]"></span>
+					http://forkgasm.com/post/<span property="id" mv-default="[idify(name)]"></span>
 				</p>
 				<p property="description"></p>
 				<p class="tags">
@@ -110,6 +110,6 @@
 			<h3>See ya...</h3>
 		</footer>
 	</div>
-	<script src="./src/vendors/mavo.min.js"></script>
+	<script src="https://dev.mavo.io/dist/mavo.js"></script>
 </body>
 </html>
