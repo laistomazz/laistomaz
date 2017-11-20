@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "index.css",
+	"sources": [
+		"../../src/stylesheets/index.scss",
+		"../../src/stylesheets/abstracts/_errors.scss",
+		"../../src/stylesheets/abstracts/_reset.scss",
+		"../../src/stylesheets/abstracts/_variables.scss",
+		"../../src/stylesheets/abstracts/_typography.scss",
+		"../../src/stylesheets/layout/_common.scss",
+		"../../src/stylesheets/layout/_footer.scss",
+		"../../src/stylesheets/layout/_header.scss"
+	],
+	"names": [],
+	"mappings": "AEAA,AAAA,CAAC,CAAC;EACD,UAAU,EAAE,UAAU;CACtB;;AAED,AAAA,IAAI,CAAC;EACJ,wBAAwB,EAAE,IAAI;CAC9B;;AEND,AAAA,EAAE;AACF,AAAA,EAAE;AACF,AAAA,EAAE;AACF,AAAA,EAAE;AACF,AAAA,EAAE;AACF,AAAA,EAAE,CAAC;EACF,WAAW,EDLA,cAAc,EAAE,KAAK;ECMhC,WAAW,EAAE,GAAG;EAChB,MAAM,EAAE,CAAC;CACT;;AAED,AAAA,IAAI,CAAC;EACJ,WAAW,EDVD,WAAW,EAAE,UAAU;ECWjC,WAAW,EAAE,GAAG;EACb,SAAS,EAAE,KAAK;EAChB,KAAK,EDRD,OAAiB;CCSxB;;AAED,AAAA,EAAE,CAAC;EACF,WAAW,EDjBD,WAAW,EAAE,UAAU;CCkBjC;;ACpBD,AAAA,CAAC,CAAC;EACD,eAAe,EAAE,IAAI;EACrB,KAAK,EAAE,GAAG;EACV,UAAU,EAAE,WAAW;CAKvB;;AARD,AAKC,CALA,AAKA,MAAO,CAAC;EACP,OAAO,EAAE,GAAG;CACZ;;AAGF,AAAA,UAAU,CAAC;EACV,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,KAAK;EAChB,MAAM,EAAE,MAAM;CACd;;AAED,AAAA,CAAC;AACD,AAAA,EAAE,CAAC;EACF,SAAS,EAAE,KAAK;EAChB,UAAU,EAAE,OAAO;CACnB;;ACpBD,AAAA,MAAM,CAAC;EACN,UAAU,EAAE,IAAI;EAChB,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,cAAc;CAC1B"
+}
