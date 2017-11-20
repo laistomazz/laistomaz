@@ -11,7 +11,6 @@
 	  gtag('config', 'UA-109952868-1');
 	</script>
 
-
 	<meta http-equiv="x-ua-compatible" content="IE=Edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
@@ -23,7 +22,7 @@
 <body>
 	<header>
 		<div class="container">
-			<img src="./dist/img/lais_tomaz_2017.jpg" alt="Lais Tomaz Profile Picture">
+			<a href="./"><img src="./dist/img/lais_tomaz_2017.jpg" alt="Lais Tomaz Profile Picture"></a>
 
 			<div class="title">
 				<h1>Laís Tomaz</h1>
@@ -40,31 +39,64 @@
 		</div>
 	</header>
 
-	<section class="about">
-		<article class="container">
-			<p><strong>Hi, first of all, thanks for your visit!</strong></p>
-			<p>I've been working as a front-end developer for about 5 years now and currently I am developing using Vue.js and React, among other things.</p>
-			<p>To know more about me, including a detailed list of what I already know and what I'm studying right now, please <a href="about.html">click here</a>.</p>
-		</article>
-	</section>
+	<main class="post container">
 
-	<section class="posts container" mv-app="posts" mv-storage="https://github.com/laistomazz/laistomaz/blob/mavo/posts.json" mv-plugins="markdown" mv-bar="no-login">
-		<h2>POSTS</h2>
+		<h2>ABOUT ME</h2>
 
-		<p>I believe that sharing what we've learned is one of the best ways to become a better developer, so here I will try to post some thoughts about what I know.</p>
-
+		<h3>Right now I'm developing using:</h3>
 		<ul>
-			<li property="post" mv-multiple mv-order="desc">
-				<a href="/post.html?post=[id]">
-					<h3 property="title"></h3>
-				</a>
-
-				<p class="tags">
-					<span property="tag" mv-multiple></span>
-				</p>
-			</li>
+			<li>Vue.js</li>
+			<li>React & React Native</li>
+			<li>Test Driven Development (Jest and Cypress)</li>
 		</ul>
-	</section>
+
+		<h3>My next challenges are:</h3>
+		<ul>
+			<li>Node.js</li>
+			<li>Funcional Programming</li>
+		</ul>
+
+		<h3>I already know:</h3>
+		<ul>
+			<li>HTML5</li>
+			<li>CSS3 (including simple animations)</li>
+			<li>Javascript / ES6 &#9829;</li>
+			<li>Responsive development (not dependent of libraries)</li>
+		</ul>
+
+		<h3>I have experience using:</h3>
+		<ul>
+			<li>SASS/LESS</li>
+			<li>Grunt/Gulp/Bower/NPM Scripts</li>
+			<li>Git/Svn</li>
+			<li>jQuery</li>
+			<li>Bootstrap</li>
+			<li>SVG</li>
+			<li>Animations libraries like GreenSock</li>
+			<li>CoffeScript</li>
+			<li>Middleman/Hugo/Mavo</li>
+			<li>Ionic</li>
+		</ul>
+
+		<h3>I already developed: </h3>
+		<ul>
+			<li>lots and lots of Wordpress themes (from scratch)</li>
+			<li>lots of Joomla themes</li>
+			<li>quite a bit for Magento and Vtex e-commerce</li>
+		</ul>
+
+		<h3>Extras</h3>
+		<ul>
+			<li>I can speak english very well</li>
+			<li>But my native language is portuguese</li>
+			<li>I was born and raised on Brazil</li>
+			<li>But I'm also a Portuguese citizen (ora pois)</li>
+			<li>I'm a self-taught developer, but I took some short courses here and there</li>
+			<li>I sing in an "alternative metal" band called <a href="http://valiriaband.com" target="_blank">Valiria</a></li>
+		</ul>
+
+		<a href="./" class="back">Ok, got it! Take me back to the main page :)</a>
+	</main>
 
 	<footer>
 		<div class="container">

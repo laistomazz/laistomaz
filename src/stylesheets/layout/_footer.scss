@@ -1,0 +1,22 @@
+footer {
+	width: 100%;
+	display: table;
+	background-color: $gray;
+	color: $white;
+	padding: $gutter 0;
+
+	h2 {
+		font-size: 3em;
+	}
+
+	p {
+		font-size: 1.4em;
+		max-width: $container / 2;
+		float: left;
+		clear: left;
+	}
+
+	.social {
+		float: right;
+	}
+}

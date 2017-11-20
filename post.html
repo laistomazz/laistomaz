@@ -11,7 +11,6 @@
 	  gtag('config', 'UA-109952868-1');
 	</script>
 
-
 	<meta http-equiv="x-ua-compatible" content="IE=Edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
@@ -23,7 +22,7 @@
 <body>
 	<header>
 		<div class="container">
-			<img src="./dist/img/lais_tomaz_2017.jpg" alt="Lais Tomaz Profile Picture">
+			<a href="./"><img src="./dist/img/lais_tomaz_2017.jpg" alt="Lais Tomaz Profile Picture"></a>
 
 			<div class="title">
 				<h1>Laís Tomaz</h1>
@@ -40,31 +39,44 @@
 		</div>
 	</header>
 
-	<section class="about">
-		<article class="container">
-			<p><strong>Hi, first of all, thanks for your visit!</strong></p>
-			<p>I've been working as a front-end developer for about 5 years now and currently I am developing using Vue.js and React, among other things.</p>
-			<p>To know more about me, including a detailed list of what I already know and what I'm studying right now, please <a href="about.html">click here</a>.</p>
+	<main class="post container" mv-app mv-storage="https://github.com/laistomazz/laistomaz/blob/mavo/posts.json" mv-bar="no-login" mv-plugins="markdown" id="[idify(title)]">
+
+		<div class="mv-bar mv-ui mv-fixed"></div>
+		<meta property="selectedpost" mv-value="url('post')" />
+
+		<article property="post" mv-multiple mv-multiple-path="id=[if(selectedpost)]">
+			<time property="date" class="date"></time>
+			<p class="tags">
+				<span property="tag" mv-multiple></span>
+			</p>
+
+			<hr>
+
+			<h3>Today I've learned</h3>
+			<h2 property="title"></h2>
+
+			<div class="content" property="content">
+			</div>
 		</article>
-	</section>
 
-	<section class="posts container" mv-app="posts" mv-storage="https://github.com/laistomazz/laistomaz/blob/mavo/posts.json" mv-plugins="markdown" mv-bar="no-login">
-		<h2>POSTS</h2>
+		<a href="./" class="back">Return</a>
 
-		<p>I believe that sharing what we've learned is one of the best ways to become a better developer, so here I will try to post some thoughts about what I know.</p>
+		<div id="disqus_thread"></div>
+		<script>
+			var disqus_config = function () {
+				this.page.url = url();  // Replace PAGE_URL with your page's canonical URL variable
+				this.page.identifier = url('post') // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			};
+			(function() { // DON'T EDIT BELOW THIS LINE
+			var d = document, s = d.createElement('script');
+			s.src = 'https://lais-tomaz.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-		<ul>
-			<li property="post" mv-multiple mv-order="desc">
-				<a href="/post.html?post=[id]">
-					<h3 property="title"></h3>
-				</a>
-
-				<p class="tags">
-					<span property="tag" mv-multiple></span>
-				</p>
-			</li>
-		</ul>
-	</section>
+	</main>
 
 	<footer>
 		<div class="container">

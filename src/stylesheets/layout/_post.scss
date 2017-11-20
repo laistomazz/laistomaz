@@ -1,0 +1,89 @@
+.post {
+	padding: $gutter 0;
+
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $textFont;
+		color: $green;
+	}
+
+	h2 {
+		font-size: 3em;
+		color: $blue;
+	}
+
+	h3 {
+		font-size: 1.8em;
+	}
+	h4 {
+		font-size: 1.6em;
+	}
+	h5 {
+		font-size: 1.4em;
+	}
+	h6 {
+		font-size: 1.2em;
+	}
+
+	p, {
+		font-size: 1.4em;
+	}
+
+	.content {
+		font-size: 1.4em;
+		padding-bottom: $gutter;
+	}
+
+	ul {
+		padding-left: $gutter;
+		margin-bottom: $gutter;
+		font-size: 1.4em;
+	}
+
+	a.back {
+		float: right;
+		background: $blue;
+		color: $white;
+		border-radius: 8px;
+		font-size: 1.4em;
+		text-decoration: none;
+		padding: $gutter / 4;
+		transition: background 300ms;
+
+		&:hover {
+			background: $gray;
+		}
+	}
+
+	p.tags {
+		font-size: 1.2em;
+		float: right;
+		margin: 0;
+
+		span {
+			position: relative;
+			display: inline-block;
+			padding-left: 10px;
+			margin-left: 15px;
+
+			&:before {
+				content: '#';
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: $green;
+			}
+		}
+	}
+
+	.date {
+		font-size: 1.2em;
+	}
+
+	hr {
+		border: 1px solid $gray;
+    	margin: ($gutter/3) 0 ($gutter/2);
+	}
+}

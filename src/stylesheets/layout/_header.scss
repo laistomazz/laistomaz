@@ -1,0 +1,34 @@
+header {
+	width: 100%;
+	display: table;
+	background-color: $blue;
+	color: $white;
+	padding: $gutter 0;
+
+	img {
+		max-width: 30%;
+		float: left;
+		border: 3px solid $white;
+		border-radius: 50%;
+	}
+
+	h1 {
+		font-size: 4em;
+		margin: 0;
+		float: right;
+		clear: right;
+	}
+
+	h2 {
+		font-family: $textFont;
+		font-size: 2em;
+		float: right;
+		clear: right;
+	}
+
+	.social {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+}

@@ -1,0 +1,24 @@
+a {
+	color: inherit;
+}
+
+.container {
+	position: relative;
+	display: table;
+	width: 100%;
+	max-width: $container;
+	margin: 0 auto;
+}
+
+p {
+	font-size: $textSize;
+	margin-bottom: $gutter / 2;
+
+	strong {
+		font-weight: 700;
+	}
+}
+
+ul {
+	font-size: $textSize;
+}
