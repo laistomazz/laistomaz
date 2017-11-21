@@ -1,0 +1,18 @@
+pre {
+	position: relative;
+	width: 100%;
+	background: #eee;
+	border-left: 5px solid $blue;
+	color: $black;
+	margin-top: 0;
+	margin-bottom: $gutter / 2;
+	padding: $gutter / 2;
+	line-height: 1.5;
+	overflow: auto;
+	direction: ltr;
+	text-align: left;
+	tab-size: 4;
+	hyphens: none;
+	font-size: 1.4em;
+	white-space: pre-wrap;
+}
