@@ -27,16 +27,23 @@
 		font-size: 1.2em;
 	}
 
-	p, {
+	p {
 		font-size: 1.4em;
 	}
 
 	.content {
-		font-size: 1.4em;
 		padding-bottom: $gutter;
+
+		hr {
+	    	margin: $gutter 0;
+		}
+
+		ul, ol {
+			font-size: 1em;
+		}
 	}
 
-	ul {
+	ul, ol {
 		padding-left: $gutter;
 		margin-bottom: $gutter;
 		font-size: 1.4em;
