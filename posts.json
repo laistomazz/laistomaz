@@ -1,6 +1,11 @@
 {
 	"post": [
 		{
+			"title": "How to use Disqus in Mavo",
+			"id": "how-to-use-disqus-in-mavo",
+			"tag": []
+		},
+		{
 			"id": "how-to-create-a-vuejs-component",
 			"date": "2017-11-20",
 			"tag": [
