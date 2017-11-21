@@ -7,7 +7,7 @@
     "autoprefixer": "postcss --use autoprefixer cssnano --safe -r dist/css/**/*.css",
     "build:sass": "npm run scss && npm run autoprefixer && npm run nano",
     "build": "npm run build:sass && npm run imagemin && npm run copy",
-    "copy": "cp -R src/fonts dist/",
+    "copy": "cp -R src/fonts dist/ && cp -R src/vendors dist/",
     "start": "npm run serve & npm run watch:sass",
     "imagemin": "imagemin src/images/**/*.{gif,jpg,png} --out-dir=dist/img",
     "nano": "postcss --use cssnano --safe -r dist/css/**/*.css",
