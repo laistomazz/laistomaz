@@ -16,3 +16,8 @@ pre {
 	font-size: 1.4em;
 	white-space: pre-wrap;
 }
+
+p > code {
+	background: #eee;
+    padding: 0.1em 0.5em;
+}
