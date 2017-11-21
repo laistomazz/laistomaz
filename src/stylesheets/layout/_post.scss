@@ -43,6 +43,12 @@
 		}
 	}
 
+	img {
+		max-width: 100%;
+		height: auto;
+		border: 1px solid #e2e2e2;
+	}
+
 	ul, ol {
 		padding-left: $gutter;
 		margin-bottom: $gutter;
