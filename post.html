@@ -16,8 +16,9 @@
 	<meta charset="UTF-8">
 	<title>Laís Tomaz - Front-end developer</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700|Rubik:900" rel="stylesheet">
-	<link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css">
+	<link rel="stylesheet" href="./dist/vendors/mavo/mavo.css">
 	<link rel="stylesheet" href="./dist/css/index.css">
+	<link rel="stylesheet" href="./dist/vendors/highlight/default.css">
 </head>
 <body>
 	<header>
@@ -100,6 +101,16 @@
 		</div>
 	</footer>
 
-	<script src="https://dev.mavo.io/dist/mavo.js"></script>
+	<script src="./dist/vendors/mavo/mavo.min.js"></script>
+	<script src="./dist/vendors/highlight/highlight.pack.js"></script>
+	<!-- need to create plugin for this asap -->
+	<script>
+		setTimeout(() => {
+			const codes = Array.from(document.querySelectorAll('pre code'));
+			codes.map((code) => {
+				hljs.highlightBlock(code)
+			});
+		}, 2000);
+	</script>
 </body>
 </html>
