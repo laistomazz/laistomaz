@@ -8,7 +8,7 @@
 				"React"
 			],
 			"date": "2017-12-14",
-			"content": "Did you ever encounter the error \"Can only update a mounted or mounting component\" while trying to code your new awesome app using React Native?\n\nThen you're probably trying to change something in the state before you should, for example calling `setState` inside a `componentWillMount` lifecycle.\n\nIf you need to fetch some data in your component, use `componentDidMount`.\n\nFor performance sake, take a look at `shouldComponentUpdate` to avoid making a new request everytime the component mounts again if the data is not something that changes constantly."
+			"content": "Did you ever encounter the error **Can only update a mounted or mounting component** while trying to code your new awesome app using React Native?\n\nThen you're probably trying to change something in the state before you should, for example calling `setState` inside a `componentWillMount` lifecycle.\n\nIf you need to fetch some data in your component, use `componentDidMount`.\n\nFor performance sake, take a look at `shouldComponentUpdate` to avoid making a new request everytime the component mounts again if the data is not something that changes constantly."
 		},
 		{
 			"title": "How to use Disqus in Mavo",
