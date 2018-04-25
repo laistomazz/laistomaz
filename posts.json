@@ -3,7 +3,13 @@
 		{
 			"title": "How to unit test Vue components with Cypress",
 			"id": "how-to-unit-test-vue-components-with-cypress",
-			"tag": []
+			"tag": [
+				"Cypress",
+				"Vue.js",
+				"Tests"
+			],
+			"date": "2018-04-25",
+			"content": "If you are developing a Vue application generated using Vue CLI 3 then you know there's an option to select Cypress as your e2e testing tool and that works amazing.\n\nSo you start asking yourself why not using it to also write your unit tests and spare the need to have a different dependency just for that. A little search leads you to [cypress-vue-unit-test](https://github.com/bahmutov/cypress-vue-unit-test) and now I'm going to save you an hour of trying to figure out how to make it work, so you can easily mount your Single File Components and test the hell out of them.\n\nFirst of all, Vue CLI 3 uses Webpack 3.x, so to bundle the .vue you will need to install a different version of `@cypress/webpack-preprocessor`;\n\n`npm install --save-dev @cypress/webpack-preprocessor@1`\n\nThen we have to mess with the `/tests/e2e/plugin/index.js` file. I tried importing Vue's webpack config but that was not working, so this is how it turned out:\n\n```javascript\nconst webpack = require('@cypress/webpack-preprocessor');\n\nconst webpackOptions = {\n  module: {\n    rules: [\n      {\n        test: /\\.vue$/,\n        loader: 'vue-loader',\n      },\n      /*\n      // In case you need to handle some asset import\n      {\n        test: /\\.(png|jpg|gif)$/,\n        use: [\n          {\n            loader: 'url-loader',\n            options: {\n              limit: 8192,\n            },\n          },\n        ],\n      },\n      */\n    ],\n  },\n};\n\nconst options = {\n  webpackOptions,\n  watchOptions: {},\n};\n\nmodule.exports = (on, config) => {\n  on('file:preprocessor', webpack(options));\n  return Object.assign({}, config, {\n    fixturesFolder: 'tests/e2e/fixtures',\n    integrationFolder: 'tests/e2e/specs',\n    screenshotsFolder: 'tests/e2e/screenshots',\n    videosFolder: 'tests/e2e/videos',\n    supportFile: 'tests/e2e/support/index.js',\n  });\n};\n```\n\nYour test file may look something like this:\n```javascript\nimport YourComponent from '@/src/components/YourComponent.vue';\n\nconst mountVue = require('cypress-vue-unit-test');\n\ndescribe('YourComponent', () => {\n  beforeEach(mountVue(YourComponent));\n\n  it('Renders correctly', () => {\n    cy.contains('h1', 'Cypress is awesome!');\n  });\n});\n```\n\n\nFor more information about writing your tests, read [@bahmutov/cypress-vue-unit-test](https://github.com/bahmutov/cypress-vue-unit-test) 's documentation, it's very easy to follow!\n\nAnd voilá, now you can add Cypress-Vue-Unit-Tester to your resume!\n\nHope it was helpful and if so, please leave a comment and subscribe to my yout.. oh no, wrong website :)"
 		},
 		{
 			"title": "What I want to learn in 2018",
