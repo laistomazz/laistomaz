@@ -1,6 +1,11 @@
 {
 	"post": [
 		{
+			"title": "How to unit test Vue components with Cypress",
+			"id": "how-to-unit-test-vue-components-with-cypress",
+			"tag": []
+		},
+		{
 			"title": "What I want to learn in 2018",
 			"id": "what-i-want-to-learn-in-2018",
 			"tag": [
