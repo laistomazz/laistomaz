@@ -32,11 +32,11 @@
   "homepage": "https://github.com/laistomazz/laistomaz#readme",
   "devDependencies": {
     "autoprefixer": "^7.1.6",
-    "cssnano": "^3.10.0",
+    "cssnano": "^4.1.10",
     "http-server": "^0.10.0",
-    "imagemin-cli": "^3.0.0",
-    "node-sass": "^4.7.1",
-    "onchange": "^3.2.1",
-    "postcss-cli": "^4.1.1"
+    "imagemin-cli": "^4.0.1",
+    "node-sass": "^4.11.0",
+    "onchange": "^5.2.0",
+    "postcss-cli": "^6.1.2"
   }
 }
