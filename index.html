@@ -4,209 +4,224 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta property="og:title" content="Laís Tomaz">
+	<meta property="og:description" content="Front-end developer | Music">
+	<meta property="og:image" content="http://laistomaz.com/lais_tomaz_logo.png">
+	<meta property="og:url" content="http://laistomaz.com">
+	<meta property="og:site_name" content="Laís Tomaz">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image:alt" content="Laís Tomaz's profile">
+	<meta name="twitter:site" content="@laistomazz">
+
   <link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
   <title>Laís Tomaz</title>
   <style>
-	:root {
-		--content-color: rgba(255, 255, 255, 0.8);
-		--link-color: rgba(206, 0, 0, 0.7);
-	}
+    html {
+      font-family: sans-serif;
+      line-height: 1.15;
+    }
 
-	body {
-		margin: 0;
-		padding: 0;
-		background: #000;
-		color: #fff;
-	}
+    :root {
+      --content-color: rgba(255, 255, 255, 0.8);
+      --link-color: rgba(206, 0, 0, 0.7);
+    }
 
-	h1, h2, h3 {
-		font-family: 'Raleway', sans-serif;
-		text-transform: uppercase;
-		letter-spacing: 0.5em;
-	}
+    body {
+      background: #000;
+      color: #fff;
+    }
 
-	h2, h3 {
-		letter-spacing: 0.2em;
-	}
+    h1, h2, h3 {
+      font-family: 'Raleway', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.5em;
+    }
 
-	a {
-		color: inherit;
-	}
+    h2, h3 {
+      letter-spacing: 0.2em;
+    }
 
-	p {
-		line-height: 1.5;
-		color: var(--content-color);
-	}
+    a {
+      color: inherit;
+    }
 
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
+    p {
+      line-height: 1.5;
+      color: var(--content-color);
+    }
 
-	h1 {
-		font-size: 2.5em;
-		line-height: 1em;
-		margin-top: calc(100vh - 108px);
-		margin-left: -12px;
-		color: #fff;
-	}
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
-	h1 span {
-		margin-left: 1em;
-	}
+    h1 {
+      font-size: 2.5em;
+      line-height: 1em;
+      margin-top: calc(100vh - 108px);
+      margin-left: -12px;
+      color: #fff;
+    }
 
-	h2 {
-		font-size: 1.6em;
-	}
+    h1 span {
+      margin-left: 1em;
+    }
 
-	.layout {
-		display: grid;
-		grid-template: 100vh 1fr 200px / 50px 1fr;
-	}
+    h2 {
+      font-size: 1.6em;
+    }
 
-	.layout__cross {
-		position: fixed;
-		width: 50px;
-		height: 1vh;
-		z-index: 1;
-	}
+    .layout {
+      display: grid;
+      grid-template: 100vh 1fr 200px / 50px 1fr;
+    }
 
-	.layout__cross::after {
-		content: '';
-		position: absolute;
-		right: 0;
-		width: 11px;
-		height: calc(100vh - 40px);
-		background-color: #fff;
-	}
+    .layout__cross {
+      position: fixed;
+      width: 50px;
+      height: 1vh;
+      z-index: 1;
+    }
 
-	.layout__cross::before {
-		content: '';
-		position: absolute;
-		top: calc(100vh - 80px);
-		right: -20px;
-		width: 50px;
-		height: 11px;
-		background-color: #fff;
-	}
+    .layout__cross::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 11px;
+      height: calc(100vh - 40px);
+      background-color: #fff;
+    }
 
-	.header {
-		grid-area: 1 / 2;
-	}
+    .layout__cross::before {
+      content: '';
+      position: absolute;
+      top: calc(100vh - 80px);
+      right: -20px;
+      width: 50px;
+      height: 11px;
+      background-color: #fff;
+    }
 
-	.main {
-		grid-area: 2 / 2;
-		display: grid;
-		grid-template: 1fr 1fr / 1fr 1fr;
-		grid-gap: 10vh 2vw;
-		padding: 20vh 15px 20vh 50px;
-	}
+    .header {
+      grid-area: 1 / 2;
+    }
 
-	.about {
-		grid-area: 1 / 1;
-	}
+    .main {
+      grid-area: 2 / 2;
+      display: grid;
+      grid-template: 1fr 1fr / 1fr;
+      grid-gap: 10vh 2vw;
+      padding: 20vh 40px 20vh 50px;
+    }
 
-	.blog {
-		grid-area: 2 / 1;
-	}
+    .about {
+      grid-area: 1 / 1;
+    }
 
-	.blog__item {
-		border-bottom: 1px solid var(--content-color);
-		padding: 1em;
-	}
+    .blog {
+      grid-area: 2 / 1;
+    }
 
-	.blog__item-link {
-		text-decoration: none;
-		color: var(--content-color);
-		transition: color 200ms;
-	}
+    .blog__item {
+      border-bottom: 1px solid var(--content-color);
+      padding: 1em;
+    }
 
-	.blog__item-link:hover {
-		color: #fff;
-	}
+    .blog__item-link {
+      text-decoration: none;
+      color: var(--content-color);
+      transition: color 200ms;
+    }
 
-	.socials {
-		grid-area: 3 / 1;
-	}
+    .blog__item-link:hover {
+      color: #fff;
+    }
 
-	.socials__link {
-		display: block;
-		margin-top: 1em;
-		text-decoration: none;
-		text-transform: lowercase;
-		letter-spacing: 0.5em;
-		transition: color 200ms;
-	}
+    .socials {
+      grid-area: 3 / 1;
+    }
 
-	.socials__link:hover {
-		color: var(--link-color);
-	}
+    .socials__link {
+      display: block;
+      margin-top: 1em;
+      text-decoration: none;
+      text-transform: lowercase;
+      letter-spacing: 0.5em;
+      transition: color 200ms;
+    }
 
-	.footer {
-		grid-area: 3 / 1 / 4 / 3;
-		background-image: linear-gradient(
-			to top,
-			var(--link-color) 0%,
-			rgba(0,0,0,0) 100%
-		);
-		animation: fireOpacity 10s ease-in-out infinite;
-	}
+    .socials__link:hover {
+      color: var(--link-color);
+    }
 
-	@keyframes fireOpacity {
-		10%, 40%, 80% {
-			opacity: 0.5;
-		}
-		28%, 60%, 89% {
-			opacity: 0.8;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
+    .footer {
+      grid-area: 3 / 1 / 4 / 3;
+      background-image: linear-gradient(
+        to top,
+        var(--link-color) 0%,
+        rgba(0,0,0,0) 100%
+      );
+      animation: fireOpacity 10s ease-in-out infinite;
+    }
 
-	@media (min-width: 360px) {
-		h1 {
-			font-size: 2.8em;
-		}
+    @keyframes fireOpacity {
+      10%, 40%, 80% {
+        opacity: 0.5;
+      }
+      28%, 60%, 89% {
+        opacity: 0.8;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
 
-		h2, h3 {
-			letter-spacing: 0.4em;
-		}
-	}
+    @media (min-width: 360px) {
+      h1 {
+        font-size: 2.8em;
+      }
 
-	@media (min-width: 768px) {
-		h1 {
-			font-size: 3.2em;
-			margin-top: calc(100vh - 114px);
-			margin-left: -14px;
-		}
+      h2, h3 {
+        letter-spacing: 0.4em;
+      }
+    }
 
-		h1 span {
-			margin-left: 0;
-		}
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 3.2em;
+        margin-top: calc(100vh - 114px);
+        margin-left: -14px;
+      }
 
-		h2 {
-			font-size: 2em;
-		}
+      h1 span {
+        margin-left: 0;
+      }
 
-		.main {
-			grid-gap: 50vh 5vw;
-			padding: 50vh 5vw;
-		}
+      h2 {
+        font-size: 2em;
+      }
 
-		.about {
-			grid-area: 1 / 2;
-		}
+      .main {
+        grid-template: 1fr 1fr / 1fr 1fr;
+        grid-gap: 50vh 5vw;
+        padding: 50vh 5vw;
+      }
 
-		.blog {
-			grid-area: 2 / 1;
-		}
+      .about {
+        grid-area: 1 / 2;
+      }
 
-		.socials {
-			grid-area: 3 / 2;
-		}
-	}
+      .blog {
+        grid-area: 2 / 1;
+      }
+
+      .socials {
+        grid-area: 2 / 1;
+      }
+    }
   </style>
 </head>
 <body>
@@ -217,7 +232,7 @@
     </header>
     <main class="main">
       <section class="about">
-		<h2>About me</h2>
+		    <h2>About me</h2>
 
         <p>I'm a senior front-end developer at Coolblue in the Netherlands. In the last 6 years, I've developed with a lot of different libraries and frameworks, they come and go, that's why I believe and invested in enhancing my foundational knowledge of Javascript, CSS, and HTML.</p>
 
@@ -242,30 +257,30 @@
       <section class="socials">
         <h2>FIND ME</h2>
         <a href="https://twitter.com/laistomazz"
-		   target="_blank"
-		   rel="noopener"
-           class="socials__link"
+            target="_blank"
+            rel="noopener"
+            class="socials__link"
         >
           Twitter
         </a>
         <a href="https://instagram.com/laistomazz"
-		   target="_blank"
-		   rel="noopener"
-           class="socials__link"
+            target="_blank"
+            rel="noopener"
+            class="socials__link"
         >
           Instagram
         </a>
         <a href="http://github.com/laistomazz"
-		   target="_blank"
-		   rel="noopener"
-           class="socials__link"
+            target="_blank"
+            rel="noopener"
+            class="socials__link"
         >
           GitHub
         </a>
-		<a href="https://www.linkedin.com/in/laistomaz"
-		   target="_blank"
-		   rel="noopener"
-           class="socials__link"
+		    <a href="https://www.linkedin.com/in/laistomaz"
+            target="_blank"
+            rel="noopener"
+            class="socials__link"
         >
          LinkedIn
         </a>
