@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109952868-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-109952868-1');
+	</script>
+
+
+	<meta http-equiv="x-ua-compatible" content="IE=Edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+
+	<meta property="og:title" content="Laís Tomaz">
+	<meta property="og:description" content="Take a look at what I've learned today!">
+	<meta property="og:image" content="http://laistomaz.com/dist/img/og_image.png">
+	<meta property="og:url" content="http://laistomaz.com">
+	<meta property="og:site_name" content="Laís Tomaz">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image:alt" content="Laís Tomaz's profile">
+	<meta name="twitter:site" content="@laistomazz">
+
+	<title>Laís Tomaz - Front-end developer</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700|Rubik:900" rel="stylesheet">
+	<link rel="stylesheet" href="./dist/vendors/mavo/mavo.css">
+	<link rel="stylesheet" href="./dist/css/index.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<img src="./dist/img/lais_tomaz_2017.jpg" alt="Lais Tomaz Profile Picture">
+
+			<div class="title">
+				<h1>Laís Tomaz</h1>
+				<h2>Front-end developer</h2>
+			</div>
+
+			<nav class="social">
+				<ul>
+					<li class="github"><a href="http://github.com/laistomazz" target="_blank"><i class="demo-icon icon-github-circled"></i> <span>GitHub</span></a></li>
+					<li class="linkedin"><a href="https://www.linkedin.com/in/laistomaz/" target="_blank"><i class="demo-icon icon-linkedin"></i> <span>LinkedIn</span></a></li>
+					<li class="twitter"><a href="http://twitter.com/laistomazz" target="_blank"><i class="demo-icon icon-twitter"></i> <span>Twitter</span></a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section class="about">
+		<article class="container">
+			<p><strong>Hi, first of all, thanks for your visit!</strong></p>
+			<p>I've been working as a front-end developer for about 5 years now and currently I am developing using Vue.js and React, among other things.</p>
+			<p>To know more about me, including a detailed list of what I already know and what I'm studying right now, please <a href="about.html">click here</a>.</p>
+		</article>
+	</section>
+
+	<section class="posts container" mv-app="posts" mv-storage="https://github.com/laistomazz/laistomaz/posts.json" mv-plugins="markdown" mv-bar="no-login">
+		<h2>POSTS</h2>
+
+		<p>I believe that sharing what we've learned is one of the best ways to become a better developer, so here I will try to post some thoughts about what I know.</p>
+
+		<ul>
+			<li property="post" mv-multiple mv-order="desc">
+				<a href="/post.html?post=[id]">
+					<h3 property="title"></h3>
+					<p class="hide-on-read">
+						http://laistomaz.com/post.html?post=<span property="id" mv-default="[idify(title)]"></span>
+					</p>
+				</a>
+
+				<p class="tags">
+					<span property="tag" mv-multiple></span>
+				</p>
+			</li>
+		</ul>
+	</section>
+
+	<footer>
+		<div class="container">
+			<h2>Get in touch</h2>
+			<p>If you have any more questions about me or my work, please contact me:</p>
+			<p>
+				<a href="mailto:laisotomaz@gmail.com">laisotomaz@gmail.com</a><br>
+				+55 (11) 99867-4163
+			</p>
+
+			<nav class="social">
+				<ul>
+					<li class="github"><a href="http://github.com/laistomazz" target="_blank"><i class="demo-icon icon-github-circled"></i> <span>GitHub</span></a></li>
+					<li class="linkedin"><a href="https://www.linkedin.com/in/laistomaz/" target="_blank"><i class="demo-icon icon-linkedin"></i> <span>LinkedIn</span></a></li>
+					<li class="twitter"><a href="http://twitter.com/laistomazz" target="_blank"><i class="demo-icon icon-twitter"></i> <span>Twitter</span></a></li>
+				</ul>
+			</nav>
+		</div>
+	</footer>
+
+	<script src="./dist/vendors/mavo/mavo.min.js"></script>
+</body>
+</html>
